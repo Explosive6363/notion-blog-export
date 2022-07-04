@@ -5,14 +5,17 @@
     "dev": "next dev",
     "start": "next start",
     "build": "next build && node .next/server/build-rss.js",
+    "export": "next build&&next export",
     "format": "prettier --write \"**/*.{js,jsx,json,ts,tsx,md,mdx,css,html,yml,yaml,scss,sass}\" --ignore-path .gitignore",
-    "lint-staged": "lint-staged"
+    "lint-staged": "lint-staged",
+    "start-local": "http-server ./out/"
   },
   "pre-commit": "lint-staged",
   "dependencies": {
     "@zeit/react-jsx-parser": "2.0.0",
     "async-sema": "3.1.0",
     "github-slugger": "1.2.1",
+    "http-server": "^14.1.1",
     "katex": "0.12.0",
     "next": "^11.1.2",
     "prismjs": "1.17.1",
